@@ -15,7 +15,7 @@ public class JDBCBiblioH2 implements JDBCBiblio {
     int currentYear = 2022;
     List<Document> listeDocuments;
     final String JDBC_DRIVER = "org.h2.Driver";
-    final String DB_URL = "jdbc:h2:~/tp1CRUD";
+    final String DB_URL = "jdbc:h2:~/tp1CR";
 
     String QUERY = "SELECT id, first, last, age FROM Registration";
 
