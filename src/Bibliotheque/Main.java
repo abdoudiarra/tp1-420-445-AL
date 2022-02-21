@@ -1,21 +1,28 @@
 package Bibliotheque;
 
 import Bibliotheque.Model.Bibliothecaire;
+import Bibliotheque.Model.Document;
 import Bibliotheque.Model.Lecteur;
 import Bibliotheque.Model.User;
 import Bibliotheque.Persistence.JDBCBiblio;
 import Bibliotheque.Service.ServiceBiblio;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //Créer la base de données
 
+
+
+        //Creer des documents
+        Document document10 = new Document(7,"titeuf","quelquun","foolio",2019,"magazine",21);
+        Document document11 = new Document(8,"bob","albert","francebd",2019,"CD",14);
+        Document document12 = new Document(9,"toto","Jerome","yee",2019,"DVD",7);
 
         //Créer 4 Utilisateurs
 
         //2 Lecteurs
-        User lecteur1 = new Lecteur(1,"Abdou","Diarra","65 Wall Street",0);
-        User lecteur2 = new Lecteur(2,"David","LeBois","64 rue arbre",0);
+        User lecteur1 = new Lecteur(6,"Abdou","Diarra","65 Wall Street",0);
+        User lecteur2 = new Lecteur(12,"David","LeBois","64 rue arbre",0);
 
         //2 Bibliothécaires
         User bibliothecaire1 = new Bibliothecaire(1,"Majorie", "Lavoix","23 rue monchamp");
@@ -30,19 +37,19 @@ public class Main {
 
 
         //Enregistrer bibliothécaires
-        serviceBiblio.save(bibliothecaire1);
-        serviceBiblio.save(bibliothecaire2);
+//        serviceBiblio.save(bibliothecaire1);
+//        serviceBiblio.save(bibliothecaire2);
 
         //Enregistrer Lecteurs
         serviceBiblio.save(lecteur1);
         serviceBiblio.save(lecteur2);
 
         //Ajouter livre en tant que bibliothecaire
-//        serviceBiblio.ajouterLivre(bibliothecaire1, document1);
-//        serviceBiblio.ajouterLivre(bibliothecaire2, document2);
-//        serviceBiblio.ajouterLivre(bibliothecaire1, document3);
-//        serviceBiblio.ajouterLivre(bibliothecaire2, document4);
-//        serviceBiblio.ajouterLivre(bibliothecaire1, document5);
+//        serviceBiblio.ajouterDocument(document10);
+//        serviceBiblio.ajouterDocument(document11);
+//        serviceBiblio.ajouterDocument(document12);
+//        serviceBiblio.ajouterDocument(document4);
+//        serviceBiblio.ajouterDocument(document5);
 
         //Retirer livre en tant que bibliothecaire
 //        serviceBiblio.retirerLivre(bibliothecaire1, "titre");

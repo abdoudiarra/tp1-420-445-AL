@@ -115,7 +115,7 @@ public class JDBCBiblio {
             // Execute a query
 
             System.out.println("Inserting records into the table...");
-            String sql = "INSERT INTO `users` VALUES"+  "("+ document.getId() + ","+"'"+ document.getTitre()+"'"+"," + "'"+document.getAuteur()+"'"+
+            String sql = "INSERT INTO DOCUMENTS VALUES"+  "("+ document.getId() + ","+"'"+ document.getTitre()+"'"+"," + "'"+document.getAuteur()+"'"+","+"'"+document.getEditeur()+"'"+
                     "," + "'"+document.getAnnee_de_publication()+"'"+"," + "'"+document.getGenre_de_document()+"'"+"," + "'"+document.getJours_de_pret()+"'"+");";
             stmt.executeUpdate(sql);
             System.out.println("Inserted records into the table...");
