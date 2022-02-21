@@ -1,9 +1,10 @@
 package Bibliotheque.Service;
 
-import Bibliotheque.Model.Bibliothecaire;
 import Bibliotheque.Model.Document;
 import Bibliotheque.Model.User;
 import Bibliotheque.Persistence.JDBCBiblio;
+
+import java.util.List;
 
 public class ServiceBiblio {
 
@@ -21,4 +22,14 @@ public class ServiceBiblio {
         jdbcBiblio.save(document);
 
     }
+
+    public List<Document> getDocument(String type, String valeur) {
+        return jdbcBiblio.getDocument(type,valeur);
+    }
+
+    public List<Document> getDocument(String type, int valeur) {
+        return jdbcBiblio.getDocument(type,valeur);
+    }
+
+
 }
